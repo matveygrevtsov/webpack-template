@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebpack_template=self.webpackChunkwebpack_template||[]).push([[144],{144:(e,t,l)=>{var n=l(540);l(338).createRoot(document.getElementById("root")).render(n.createElement(n.StrictMode,null,n.createElement((function(){return n.createElement("h1",null,"Hello, world!")}),null)))}}]);
