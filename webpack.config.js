@@ -1,9 +1,10 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const packageJson = require("./package.json");
 
 const OUTPUT_FOLDER_NAME = path.resolve(__dirname, "build"); // Папка, куда всё заливаться сбилженный проект.
 
-module.exports = {
+module.exports = (env, arg) => ({
   mode: "development",
   entry: "./src/index.tsx",
   output: {
@@ -26,6 +27,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+      BASE_URL: arg.mode === "production" ? packageJson.homepage : "/",
     }),
   ],
   devServer: {
@@ -36,4 +38,4 @@ module.exports = {
     historyApiFallback: true,
     compress: true,
   },
-};
+});
