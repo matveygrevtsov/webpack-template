@@ -28,6 +28,7 @@ module.exports = (env, arg) => ({
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       BASE_URL: arg.mode === "production" ? packageJson.homepage : "/",
+      favicon: "./public/favicon.png",
     }),
   ],
   devServer: {
