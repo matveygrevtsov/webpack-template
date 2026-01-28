@@ -13,7 +13,7 @@ module.exports = (env, arg) => ({
     clean: true, // Очищает выходную папку перед сборкой
   }, // выходной файл
   resolve: {
-    extensions: [".tsx", ".ts", ".js", "jsx", ".scss"],
+    extensions: [".tsx", ".ts", ".js", "jsx"],
   },
   module: {
     rules: [
@@ -21,19 +21,6 @@ module.exports = (env, arg) => ({
         test: /\.(ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
         use: "ts-loader",
-      },
-      {
-        test: /.scss$/,
-        use: [
-          "style-loader", // Добавляет CSS в DOM
-          "css-loader", // Обрабатывает @import и url()
-          {
-            loader: "sass-loader", // Компилирует Sass в CSS
-            options: {
-              // Дополнительные настройки, если необходимо
-            },
-          },
-        ],
       },
     ],
   },

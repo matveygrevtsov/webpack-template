@@ -1,1 +1,1 @@
-declare module "*.module.scss";
+// Здесь можно декларировать типы
