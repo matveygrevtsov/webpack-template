@@ -7,7 +7,7 @@
 - webpack
 - React
 - TypeScript
-- sass-модули
+- styled-components
 - prettier
 - eslint
 - gh-pages
